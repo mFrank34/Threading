@@ -13,10 +13,12 @@ add_executable(Threading
         src/basic/Basic.cpp
         src/mutexes/Mutexes.cpp
         src/condition/Condition.cpp
+        src/pool/Pool.cpp
 )
 
 target_include_directories(Threading PRIVATE
         src/basic
         src/mutexes
         src/condition
+        src/pool
 )

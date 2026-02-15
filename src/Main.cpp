@@ -7,11 +7,13 @@
 #include "basic/Basic.h"
 #include "mutexes/Mutexes.h"
 #include "condition/Condition.h"
+#include "pool/Pool.h"
 
 int main()
 {
     std::cout << "C++ Threading Basics" << std::endl;
-    std::cout << "Hardware concurrency: " << std::thread::hardware_concurrency() << " threads" << std::endl << std::endl;
+    std::cout << "Hardware concurrency: " << std::thread::hardware_concurrency() << " threads" << std::endl <<
+        std::endl;
 
     basic();
     std::cout << std::endl;
@@ -60,6 +62,17 @@ int main()
     std::cout << std::endl;
 
     barrier();
+    std::cout << std::endl;
+
+    std::cout << "C++ Thread Pool - Practical Example" << std::endl << std::endl;
+
+    basic_usage();
+    std::cout << std::endl;
+
+    dynamic_tasks();
+    std::cout << std::endl;
+
+    shared_state();
     std::cout << std::endl;
 
     return 0;
