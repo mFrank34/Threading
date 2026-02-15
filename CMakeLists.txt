@@ -11,8 +11,10 @@ file(GLOB SRC_FILES "src/*.cpp")
 add_executable(Threading
         src/Main.cpp
         src/basic/Basic.cpp
+        src/mutexes/Mutexes.cpp
 )
 
 target_include_directories(Threading PRIVATE
         src/basic
+        src/mutexes
 )
